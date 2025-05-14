@@ -64,11 +64,36 @@ WHERE CountryCode = 'KOR';
 SELECT Name, CHAR_LENGTH(Name) AS 글자수
 FROM country;
 
--- country테이블의 나라명(Name 칼럼)을 앞 세글자만 대문자로 표시하시오.
+-- country 테이블의 나라명(Name 칼럼)을 앞 세글자만 대문자로 표시하시오.
+SELECT Name, UPPER(LEFT(Name, 3)) AS 나라명
+FROM country;
+
+-- country 테이블의 기대수명(LifeExpectancy)을 소수점 첫째자리에서 반올림해서 표시하시오.
+SELECT Name, ROUND(LifeExpectancy, 1) AS 기대수명
+FROM country;
+
+-- employees db에서 각 부서별 관리자를 출력하세요.(단, 현 재직자만 출력)
+USE employees;
 
 
--- country테이블의 기대수명(LifeExpectancy)을 소수점 첫째자리에서 반올림해서 표시하시오.
 
+-- 부서번호 d005 부서의 현재 관리자 정보를 출력하세요.
+
+-- employees 테이블에서 페이지네이션으로 페이지를 추출하려고 한다.
+-- 다음 조건하에서 8번 페이지의 데이터를 출력하세요.
+-- 입사일을 내림차순으로 정렬한다.
+-- 한 페이지당 20명의 정보를 출력한다.
+
+
+-- employees db에서 재직자의 총 수를 구하시오.
+-- 재직자의 to_date값은 '9999-01-01'로 저장되어 있음
+
+-- employees db에서 재직자의 평균 급여를 출력하시오.
+
+-- 재직자 전체 평균 급여 보다 급여를 더 많이 받는 재직자를 출력하세요.
+
+-- employees db에서 각 부서별 재직자의 수를 구하시오
+-- 부서 번호로 구분하고, 부서 번호로 오름 차순 정렬하여 출력한다
 
 
 
